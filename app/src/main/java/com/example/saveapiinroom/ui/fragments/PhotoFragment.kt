@@ -11,14 +11,14 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.saveapiinroom.databinding.FragmentPhotoBinding
-import com.example.saveapiinroom.ui.adapter.PhotoAdapter
+import com.example.saveapiinroom.ui.adapter.PhotosAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class PhotoFragment : Fragment() {
 
     private lateinit var binding: FragmentPhotoBinding
-    private var photoAdapter = PhotoAdapter()
+    private var photoAdapter = PhotosAdapter()
     private val viewModel by viewModels<PhotoViewModel>()
 
     override fun onCreateView(

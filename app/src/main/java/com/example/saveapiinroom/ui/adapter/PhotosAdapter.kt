@@ -9,7 +9,7 @@ import com.bumptech.glide.Glide
 import com.example.saveapiinroom.data.model.Photo
 import com.example.saveapiinroom.databinding.ItemPhotoBinding
 
-class PhotoAdapter : ListAdapter<Photo, PhotoAdapter.PhotoViewHolder>(diffUtil) {
+class PhotosAdapter : ListAdapter<Photo, PhotosAdapter.PhotoViewHolder>(diffUtil) {
     inner class PhotoViewHolder(private val binding: ItemPhotoBinding) : ViewHolder(binding.root) {
         fun onBind(item: Photo) {
             Glide.with(binding.imageIcon.context)
