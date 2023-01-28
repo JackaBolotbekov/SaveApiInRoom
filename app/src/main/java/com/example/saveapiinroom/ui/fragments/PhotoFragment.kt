@@ -43,7 +43,7 @@ class PhotoFragment : Fragment() {
         if (checkForInternet(requireContext())) {
             viewModel.photoLiveData.observe(viewLifecycleOwner) {
                 photoAdapter.submitList(it)
-                Toast.makeText(requireContext(), "Connected", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Internet", Toast.LENGTH_SHORT).show()
             }
 
             viewModel.errorPhotoLiveData.observe(viewLifecycleOwner) {
@@ -53,7 +53,7 @@ class PhotoFragment : Fragment() {
         } else {
             viewModel.localPhotosLiveData?.observe(viewLifecycleOwner) {
                 photoAdapter.submitList(it)
-                Toast.makeText(requireContext(), "Disconnected", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "No Internet", Toast.LENGTH_SHORT).show()
             }
         }
     }
